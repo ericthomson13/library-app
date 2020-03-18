@@ -22,11 +22,21 @@ const Catalog = () => {
   ];
   const [shuffledItems, setShuffledItems] = useState(shuffle([...catalogItems]));
 
-  const upButtonHandler = (index) => {
-
+  const upHandler = (i) => {
+    if (i === 0) return;
+    const newArr = [...shuffledItems];
+    const temp = newArr[i];
+    newArr[i] = newArr[i - 1];
+    newArr[i - 1] = temp;
+    setShuffledItems(newArr);
   };
-  const downButtonHandler = (index) => {
-
+  const downHandler = (i) => {
+    if (i === shuffledItems.length) return;
+    const newArr = [...shuffledItems];
+    const temp = newArr[i];
+    newArr[i] = newArr[i + 1];
+    newArr[i + 1] = temp;
+    setShuffledItems(newArr);
   };
 
   return (
@@ -38,8 +48,8 @@ const Catalog = () => {
           key={i} 
           name={item} 
           index={i} 
-          upHandler={upButtonHandler} 
-          downHandler={downButtonHandler}
+          upHandler={upHandler} 
+          downHandler={downHandler}
         />
       ))}
     </div>
