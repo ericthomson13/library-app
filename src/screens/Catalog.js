@@ -3,19 +3,8 @@
 import React, { useState } from 'react';
 
 import CatalogItem from '../components/CatalogItem';
+import { shuffle } from '../utility/functions';
 
-const shuffle = (array) => {
-	let currentIndex = array.length;
-	let temporaryValue; let randomIndex;
-	while (currentIndex !== 0) {
-		randomIndex = Math.floor(Math.random() * currentIndex);
-		currentIndex -= 1;
-		temporaryValue = array[currentIndex];
-		array[currentIndex] = array[randomIndex];
-		array[randomIndex] = temporaryValue;
-	}
-	return array;
-};
 const Catalog = () => {
   const catalogItems = [
     'PS3022 .K622 2019', 'QA890 .T92 2018', 'QA890 .T92 2019', 'Q690 .S12.2016', 'PQ3022 .N84 2019', 'PS3022 .K601 2019'
