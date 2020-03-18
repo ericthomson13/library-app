@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
+
+import MLAItem from '../components/MLAItem';
 
 const MLAFormat = (props) => {
 

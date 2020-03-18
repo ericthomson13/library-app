@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import CatalogItem from '../components/CatalogItem';
+
 const Catalog = (props) => {
 
   return (
