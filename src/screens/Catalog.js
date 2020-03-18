@@ -1,15 +1,25 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable no-param-reassign */
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import CatalogItem from '../components/CatalogItem';
 import { shuffle } from '../utility/functions';
+import Winner from '../components/Winner';
 
 const Catalog = () => {
   const catalogItems = [
     'PS3022 .K622 2019', 'QA890 .T92 2018', 'QA890 .T92 2019', 'Q690 .S12.2016', 'PQ3022 .N84 2019', 'PS3022 .K601 2019'
   ];
   const [shuffledItems, setShuffledItems] = useState(shuffle([...catalogItems]));
+  const winner = useRef(false);
+
+  useEffect(() => {
+    for (let i = 0; i < shuffledItems.length ; i++) {
+      if (shuffledItems[i] !== catalogItems[i]) return;
+    }
+    winner.current = true;
+  }, [shuffledItems, catalogItems]);
 
   const upHandler = (i) => {
     if (i === 0) return;
@@ -41,6 +51,7 @@ const Catalog = () => {
           downHandler={downHandler}
         />
       ))}
+      {winner.current ? <Winner /> : null}
     </div>
     </>
   );
