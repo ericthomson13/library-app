@@ -1,9 +1,9 @@
 import React from 'react';
 
-const CatalogItem = (props) => {
+const CatalogItem = ({ name }) => {
 
   return (
-    <div>This Will be a Catalog Item</div>
+    <div>{name}</div>
   );
 };
 
