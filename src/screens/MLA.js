@@ -2,7 +2,7 @@ import React from 'react';
 
 import MLAItem from '../components/MLAItem';
 
-const MLAFormat = (props) => {
+const MLAFormat = () => {
 
   return (
     <h2>MLA Format</h2>

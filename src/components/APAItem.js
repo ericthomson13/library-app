@@ -1,6 +1,6 @@
 import React from 'react';
 
-const APAItem = (props) => {
+const APAItem = () => {
 
   return (
     <div>This will be an APA Item</div>

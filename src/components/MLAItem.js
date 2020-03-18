@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const MLAItem = (props) => {
+const MLAItem = () => {
   
   return (
     <div>This will be an MLA Item</div>
