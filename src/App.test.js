@@ -1,9 +1,11 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { mount } from 'enzyme';
+
 import App from './App';
 
-xtest('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('Test for App', () => {
+  it('renders App without crashing', () => {
+    const wrapper = mount(<App />);
+    expect(!!wrapper).toBe(true);
+  });
 });
