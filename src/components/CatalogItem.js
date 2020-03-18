@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CatalogItem = ({ name }) => {
+const CatalogItem = ({ name, index }) => {
 
   return (
     <div>{name}</div>

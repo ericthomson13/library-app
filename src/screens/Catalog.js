@@ -3,24 +3,16 @@ import React, { useState, useRef } from 'react';
 import CatalogItem from '../components/CatalogItem';
 
 const shuffle = (array) => {
-
 	var currentIndex = array.length;
 	var temporaryValue, randomIndex;
-
-	// While there remain elements to shuffle...
 	while (0 !== currentIndex) {
-		// Pick a remaining element...
 		randomIndex = Math.floor(Math.random() * currentIndex);
 		currentIndex -= 1;
-
-		// And swap it with the current element.
 		temporaryValue = array[currentIndex];
 		array[currentIndex] = array[randomIndex];
 		array[randomIndex] = temporaryValue;
 	}
-
 	return array;
-
 };
 const Catalog = (props) => {
   const catalogItems = [
@@ -28,11 +20,26 @@ const Catalog = (props) => {
   ];
   const [shuffledItems, setShuffledItems] = useState(shuffle([...catalogItems]));
 
+  const upButtonHandler = (index) => {
+
+  };
+  const downButtonHandler = (index) => {
+
+  };
+
   return (
     <>
-    <h2>Catalog Page</h2>
+    <h2>Call Number Sorter</h2>
     <div>
-      {shuffledItems.map((item, i) => <CatalogItem key={i} name={item} />)}
+      {shuffledItems.map((item, i) => (
+        <CatalogItem 
+          key={i} 
+          name={item} 
+          index={i} 
+          upHandler={upButtonHandler} 
+          downHandler={downButtonHandler}
+        />
+      ))}
     </div>
     </>
   );

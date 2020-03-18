@@ -22,7 +22,7 @@ function App() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/catalog">Catalog</Link>
+            <Link to="/catalog">Call Number</Link>
           </li>
           <li>
             <Link to="/APAformat">APA Citation</Link>
