@@ -7,6 +7,8 @@ import CatalogItem from '../components/CatalogItem';
 import { shuffle } from '../utility/functions';
 import Winner from '../components/Winner';
 
+
+// TODO: make unique keys because indexes aren't good for arrays that will be mutated
 const Catalog = () => {
   const catalogItems = [
     'PS3022 .K622 2019', 'QA890 .T92 2018', 'QA890 .T92 2019', 'Q690 .S12 2016', 'PQ3022 .N84 2019', 'PS3022 .K601 2019'
