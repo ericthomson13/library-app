@@ -4,7 +4,7 @@ import React from 'react';
 const CatalogItem = ({ name, index, upHandler, downHandler }) => {
 
   return (
-    <div>
+    <div className="catalog-item">
       <div>{name}</div>
       <button type="button" onClick={() => upHandler(index)}>Move Up</button>
       <button type="button" onClick={() => downHandler(index)}>Move Down</button>

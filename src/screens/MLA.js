@@ -5,7 +5,7 @@ import MLAItem from '../components/MLAItem';
 const MLAFormat = () => {
 
   return (
-    <h2>MLA Format</h2>
+    <h2 className="game-title">MLA Format</h2>
   );
 };
 
