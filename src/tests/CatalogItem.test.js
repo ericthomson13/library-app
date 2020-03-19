@@ -1,13 +1,13 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import CatalogItem from '../components/CatalogItem';
 
 describe('CatalogItem Tests', () => {
   let shallowTest; let downHandler; let upHandler;
   beforeEach(() => {
-    downHandler = jest.fn();
-    upHandler = jest.fn();
+    downHandler = jest.fn(() => 1).mockName('downHandler');
+    upHandler = jest.fn(() => 1).mockName('upHandler');
     shallowTest = shallow(
       <CatalogItem 
         name="PS3022 .K622 2019" 
@@ -40,8 +40,16 @@ describe('CatalogItem Tests', () => {
     shallowTest.find('.up-button').simulate('click')
     expect(upHandler).toHaveBeenCalled();
   });
+  it('Returns Correct Index Value on Up Button Click', () => {
+    shallowTest.find('.up-button').simulate('click');
+    expect(upHandler.mock.results[0].value).toBe(1);
+  });
   it('Handles Click on Move Down', () => {
     shallowTest.find('.down-button').simulate('click');
     expect(downHandler).toHaveBeenCalled();
-  })
+  });
+  it('Returns Correct Index Value on Down Button Click', () => {
+    shallowTest.find('.down-button').simulate('click');
+    expect(downHandler.mock.results[0].value).toBe(1);
+  });
 });

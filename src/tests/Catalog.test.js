@@ -19,7 +19,7 @@ describe('Test Suite for Catalog', () => {
   });
 });
 
-xdescribe('Integration with CatalogItem Children', () => {
+describe('Integration with CatalogItem Children', () => {
   let mountTest;
   beforeEach(() => {
     mountTest = mount(<Catalog />);
