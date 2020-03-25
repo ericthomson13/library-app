@@ -1,6 +1,8 @@
 import React from 'react';
 
-const MLAItem = () => {
+import { shuffle } from '../utility/functions';
+
+const MLAItem = ({ type, item, }) => {
   
   return (
     <div>This will be an MLA Item</div>
