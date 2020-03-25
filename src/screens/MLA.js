@@ -12,6 +12,7 @@ const MLAFormat = () => {
     <>
     <h2 className="game-title">MLA Format</h2>
     {list}
+    <h5>* Note that {'<'} and {'>'} are not to be included in the actual citation</h5>
     </>
   );
 };

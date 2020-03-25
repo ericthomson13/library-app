@@ -39,9 +39,9 @@ const MLAItem = ({ type, item, }) => {
       <p>{
         shuffledItem.map((string, i) => (
           <>
-            <button type="button" onClick={() => upHandler(i)}>Up</button>
+            <button type="button" onClick={() => upHandler(i)}>{'<'}</button>
             <span>{string}</span>
-            <button type="button" onClick={() => downHandler(i)}>Down</button>
+            <button type="button" onClick={() => downHandler(i)}>{'>'}</button>
           </>
         ))
       }</p>
