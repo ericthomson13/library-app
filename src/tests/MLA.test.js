@@ -11,7 +11,7 @@ describe('MLA Screen Testing Suite', () => {
   it('Renders without crashing', () => {
     expect(mountTest.find('div').length).toBe(5);
   });
-  it('Does not Render Winner on Mount', () => {
-    expect(mountTest.find('.winner').length).toBe(0);
+  it('Renders an h2 with the class game-title', () => {
+    expect(mountTest.find('h2').hasClass('game-title')).toBe(true);
   });
 });
