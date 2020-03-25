@@ -44,6 +44,7 @@ const Catalog = () => {
   return (
     <>
     <h2>Call Number Sorter</h2>
+    {winner && <Winner />}
     <div>
       {shuffledItems.map((item, i) => (
         <CatalogItem 
@@ -54,7 +55,6 @@ const Catalog = () => {
           downHandler={downHandler}
         />
       ))}
-      {winner ? <Winner /> : null}
     </div>
     </>
   );

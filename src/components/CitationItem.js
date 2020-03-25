@@ -2,9 +2,11 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect, } from 'react';
 
+import Winner from './Winner';
+
 import { shuffle, } from '../utility/functions';
 
-const MLAItem = ({ type, item, }) => {
+const CitationItem = ({ type, item, }) => {
   const [shuffledItem, setShuffledItem] = useState(shuffle([ ...item ]));
   const [winner, setWinner] = useState(false);
 
@@ -34,9 +36,9 @@ const MLAItem = ({ type, item, }) => {
   };
 
   return (
-    <div className="mla-item">
+    <div className="citation-item">
       <h3>{type}</h3>
-      {winner && <h4 className="winner">Citation is Correct!</h4>}
+      {winner && <Winner />}
       <p className={winner ? 'green-font' : 'black-font'}>{
         shuffledItem.map((string, i) => (
           <>
@@ -50,4 +52,4 @@ const MLAItem = ({ type, item, }) => {
   );
 };
 
-export default MLAItem;
+export default CitationItem;
