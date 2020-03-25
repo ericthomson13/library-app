@@ -6,7 +6,7 @@ import mlaData from '../utility/mlaData';
 
 const MLAFormat = () => {
   const list = mlaData.map((citation) => (
-   <MLAItem type={citation.type} item={[ ...citation.items ]}/>
+   <MLAItem type={citation.type} item={[ ...citation.items ]} key={citation.id} />
   ))
   return (
     <>

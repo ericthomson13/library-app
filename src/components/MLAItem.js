@@ -34,9 +34,9 @@ const MLAItem = ({ type, item, }) => {
   };
 
   return (
-    <>
+    <div className="mla-item">
       <h3>{type}</h3>
-      {winner && <h4>Citation is Correct!</h4>}
+      {winner && <h4 className="winner">Citation is Correct!</h4>}
       <p className={winner ? 'green-font' : 'black-font'}>{
         shuffledItem.map((string, i) => (
           <>
@@ -46,7 +46,7 @@ const MLAItem = ({ type, item, }) => {
           </>
         ))
       }</p>
-    </>
+    </div>
   );
 };
 

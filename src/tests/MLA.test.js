@@ -9,6 +9,9 @@ describe('MLA Screen Testing Suite', () => {
     mountTest = mount(<MLAFormat />)
   });
   it('Renders without crashing', () => {
-    expect(mountTest.find('h2').length).toBe(1);
+    expect(mountTest.find('div').length).toBe(5);
+  });
+  it('Does not Render Winner on Mount', () => {
+    expect(mountTest.find('.winner').length).toBe(0);
   });
 });
