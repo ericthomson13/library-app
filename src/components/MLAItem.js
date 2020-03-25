@@ -36,7 +36,8 @@ const MLAItem = ({ type, item, }) => {
   return (
     <>
       <h3>{type}</h3>
-      <p>{
+      {winner && <h4>Citation is Correct!</h4>}
+      <p className={winner ? 'green-font' : 'black-font'}>{
         shuffledItem.map((string, i) => (
           <>
             <button type="button" onClick={() => upHandler(i)}>{'<'}</button>
