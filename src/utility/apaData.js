@@ -34,4 +34,6 @@ const apaData = [
       'Flaherty, Kelley Lynn, Turk, Philip James, ', '& Anderson, James Thomas. ', '(2019). ', 'Comparing Stakeholder Attitudes Toward White-tailed Deer and Rare Plant Management in Canaan Valley, West Virginia. ', 'Global Ecology and Conservation, ', '17, ', 'e00519. ', 'https://doi.org/10.1016/j.gecco.2018.e00519',
     ],
   }
-]
+];
+
+export default apaData

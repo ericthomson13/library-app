@@ -1,17 +1,17 @@
 import React from 'react';
 
-import MLAItem from '../components/MLAItem';
+import CitationItem from '../components/CitationItem';
 
 import mlaData from '../utility/mlaData';
 
 const MLAFormat = () => {
   const list = mlaData.map((citation) => (
-   <MLAItem type={citation.type} item={[ ...citation.items ]} key={citation.id} />
+   <CitationItem type={citation.type} item={[ ...citation.items ]} key={citation.id} />
   ))
   return (
     <>
     <h2 className="game-title">MLA Format</h2>
-    {list}
+      {list}
     <h5>* Note that {'<'} and {'>'} are not to be included in the actual citation</h5>
     </>
   );
