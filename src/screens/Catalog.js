@@ -11,7 +11,7 @@ import Winner from '../components/Winner';
 // TODO: make unique keys because indexes aren't good for arrays that will be mutated
 const Catalog = () => {
   const catalogItems = [
-    'PS3022 .K622 2019', 'QA890 .T92 2018', 'QA890 .T92 2019', 'Q690 .S12 2016', 'PQ3022 .N84 2019', 'PS3022 .K601 2019'
+    'PS3022 .K601 2019', 'PS3022 .K622 2019', 'PQ3022 .N84 2019', 'Q690 .S12 2016', 'QA890 .T92 2018', 'QA890 .T92 2019',
   ];
   const [shuffledItems, setShuffledItems] = useState(shuffle([...catalogItems]));
   const [winner, setWinner] = useState(false);
@@ -43,9 +43,13 @@ const Catalog = () => {
 
   return (
     <>
-    <h2>Call Number Sorter</h2>
-    {winner && <Winner />}
+    <h2>Call Stack Number</h2>
     <div>
+      Resources on how these are arranged can be found <a href="https://www.libraries.rutgers.edu/rul/staff/access_serv/student_coord/LibConSys.pdf">here</a>
+    </div>
+
+    {winner && <Winner />}
+    {!winner && <div>
       {shuffledItems.map((item, i) => (
         <CatalogItem 
           key={i} 
@@ -55,7 +59,7 @@ const Catalog = () => {
           downHandler={downHandler}
         />
       ))}
-    </div>
+    </div>}
     </>
   );
 };
