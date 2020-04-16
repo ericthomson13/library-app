@@ -38,7 +38,7 @@ const CitationItem = ({ type, item, }) => {
   return (
     <div className="citation-item">
       <h3>{type}</h3>
-      {winner && <Winner />}
+      {winner ?  <Winner /> : 
       <p className={winner ? 'green-font' : 'black-font'}>{
         shuffledItem.map((string, i) => (
           <>
@@ -48,6 +48,7 @@ const CitationItem = ({ type, item, }) => {
           </>
         ))
       }</p>
+    }
     </div>
   );
 };
